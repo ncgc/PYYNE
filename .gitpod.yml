@@ -1,0 +1,10 @@
+ports:
+  - port: 8080
+tasks:
+  - init: mysql < DDL.sql
+image: gitpod/workspace-mysql
+
+vscode:
+  extensions:
+    - vscjava.vscode-maven@0.21.2:tFEkt2FqLujaNTLU5AmRiQ==
+    - formulahendry.vscode-mysql@0.4.0:IAUm3OoC/011qAjawyOjqw==
