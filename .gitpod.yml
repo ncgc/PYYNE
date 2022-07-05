@@ -1,10 +1,18 @@
 ports:
-  - port: 8080
+  - name: Web App Pyyne
+    description: The main application web server
+    port: 8080
+    onOpen: open-browser
+
 tasks:
-  - init: mysql < DDL.sql
-image: gitpod/workspace-mysql
+  - init: mvn package
+    command: mvn exec:java
+
+image: gitpod/workspace-postgres
 
 vscode:
   extensions:
-    - vscjava.vscode-maven@0.21.2:tFEkt2FqLujaNTLU5AmRiQ==
-    - formulahendry.vscode-mysql@0.4.0:IAUm3OoC/011qAjawyOjqw==
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-test
+    - pivotal.vscode-spring-boot
+    - vscjava.vscode-maven@0.21.2
