@@ -1,0 +1,9 @@
+tasks:
+  - init: mvn package
+    command: mvn exec:java
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-debug
+    - vscjava.vscode-java-test
+    - vscjava.vscode-maven@0.21.2
